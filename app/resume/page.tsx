@@ -1,0 +1,14 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight, Download } from "lucide-react";
+import { PageHero } from "@/components/page-hero";
+
+export const metadata: Metadata = { title: "Resume" };
+const tools = "Veo 3.1, Kling, Runway, CapCut, Midjourney, ChatGPT, ElevenLabs, Suno, Canva, Next.js, TypeScript, Tailwind CSS, GitHub, Google Docs, Google Sheets";
+export default function ResumePage() { return <>
+  <PageHero index="04" eyebrow="EXPERIENCE + CAPABILITIES" title={<>Creative instincts.<br /><em>Builder&apos;s discipline.</em></>} copy="AI content, cinematic video production, web products and practical digital workflows." />
+  <section className="resume shell">
+    <aside><div><span className="eyebrow">CONTACT</span><a href="mailto:ultimatemoxie290@gmail.com">ultimatemoxie290@gmail.com</a><span>Ilorin, Nigeria</span></div><div><span className="eyebrow">LINKS</span><a target="_blank" href="https://linkedin.com/in/ultimate-moxie-a4664b292">LinkedIn <ArrowUpRight /></a><a target="_blank" href="https://github.com/ultimatemoxie">GitHub <ArrowUpRight /></a></div><a className="pill pill-ember" target="_blank" href="https://docs.google.com/document/d/1Vui4LqiAu1-vBrvGAqmSpFRPc3UqMsu4kN5euuFpruU/edit">Open full CV <Download /></a></aside>
+    <div className="resume-main"><section><span className="eyebrow">PROFILE</span><p className="resume-lead">Creative AI Content and Video Assistant with practical experience producing cinematic promotional videos, trailers, advertisements and short-form digital content.</p></section><section><span className="eyebrow">EXPERIENCE</span><div className="resume-row"><div><strong>Freelance AI Video Creator &amp; Digital Content Assistant</strong><span>Remote · 2025—Present</span></div><p>Creates promotional videos, trailers, advertisements and social content; develops scene breakdowns, visual prompts, animation, edits, voiceover, music and sound.</p></div></section><section><span className="eyebrow">SELECTED PROJECTS</span><div className="resume-row"><div><strong>Cinematic AI Video Production</strong><span>Creative practice</span></div><p>Book trailers, movie-style trailers, music videos, product advertisements and social campaigns.</p></div><div className="resume-row"><div><strong>Cues Budget Tracker</strong><span>Product in development</span></div><p>A responsive personal finance web application designed to help users understand spending habits and financial behaviour.</p></div></section><section><span className="eyebrow">TOOLS</span><p>{tools}</p></section><section><span className="eyebrow">EDUCATION</span><div className="resume-row"><div><strong>B.Agric, Animal Production</strong><span>Kwara State University</span></div><p>2026—Present · Expected graduation 2030</p></div></section></div>
+  </section>
+  </>; }
