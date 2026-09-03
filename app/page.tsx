@@ -22,7 +22,7 @@ export default function Home() {
         <div className="hero-meta eyebrow"><span>AI CREATIVE + PRODUCT BUILDER</span><span>ILORIN, NIGERIA · AVAILABLE REMOTELY</span></div>
         <div className="hero-grid">
           <div className="hero-copy">
-            <Reveal><h1>I build things<br />people can <em>watch,</em><br /><span>use &amp; remember.</span></h1></Reveal>
+            <Reveal><h1>I build things<br />people can<span className="hero-mobile-break"><br /></span> <em>watch,</em><br /><span>use &amp; remember.</span></h1></Reveal>
             <Reveal className="hero-description" delay={0.12}><p>I&apos;m Oladosu Abdulmuiz Adeshina — an AI Creative &amp; Product Builder working across cinematic AI video, software and automation.</p><div className="hero-actions"><Link className="pill pill-ember" href="#work">Explore My Work <ArrowRight /></Link><Link className="text-link" href="/resume">View Resume <ArrowUpRight /></Link></div></Reveal>
           </div>
         </div>
