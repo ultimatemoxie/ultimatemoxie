@@ -33,7 +33,7 @@ export function SelectedWorkCard({ project, index }: { project: FeaturedProject;
         <Link href={project.href} {...linkProps}>{poster}</Link>
       )}
       <div className="featured-caption">
-        <Link href={project.href} {...linkProps}><span>{project.category}</span><h3>{project.title}</h3>{external && <small>Visit checkcues.com ↗</small>}</Link>
+        <Link href={project.href} {...linkProps}><span>{project.category}</span><h3>{project.title}</h3>{external && project.ctaLabel && <small>{project.ctaLabel}</small>}</Link>
         <Link href={project.href} aria-label={external ? "Visit Cues live product" : `View ${project.title}`} {...linkProps}><ArrowUpRight /></Link>
       </div>
     </article>

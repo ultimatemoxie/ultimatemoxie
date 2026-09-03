@@ -29,11 +29,13 @@ export default function Home() {
         <div className="discipline-strip">{["AI VIDEO", "SOFTWARE", "AUTOMATION", "PRODUCT THINKING"].map((item, i) => <div key={item}><span>0{i + 1}</span><strong>{item}</strong></div>)}</div>
       </section>
 
+      <section className="toolbelt"><div className="eyebrow shell">CURRENT TOOLBELT</div><div className="marquee"><div>{[...tools, ...tools].map((tool, i) => <span key={`${tool}-${i}`}>{tool}<i>✦</i></span>)}</div></div></section>
+
       <section id="work" className="build-section shell">
         <div className="section-intro"><div className="eyebrow">WHAT I BUILD</div><Reveal><h2>Two sides of<br /><em>the same builder.</em></h2></Reveal><p>Moving between story and system—always building toward a clear, useful experience.</p></div>
         <div className="discipline-cards">
           <Link href="/video" className="discipline-card video-card"><span className="card-number">01</span><div className="card-icon"><Clapperboard /></div><div><span className="eyebrow">THE CREATIVE DISCIPLINE</span><h3>AI VIDEO</h3><p>Cinematic commercials<br />Music videos<br />Trailers<br />Visual storytelling</p></div><span className="card-cta">Enter the Studio <ArrowUpRight /></span></Link>
-          <Link href="/software" className="discipline-card software-card"><span className="card-number">02</span><div className="card-icon"><Braces /></div><div><span className="eyebrow">THE PRODUCT DISCIPLINE</span><h3>SOFTWARE</h3><p>Web applications<br />AI products<br />Automation<br />Digital systems</p></div><span className="card-cta">Explore the Builds <ArrowUpRight /></span></Link>
+          <Link href="/software" className="discipline-card software-card"><span className="card-number">02</span><div className="card-icon"><Braces /></div><div><span className="eyebrow">THE PRODUCT DISCIPLINE</span><h3>SOFTWARE</h3><p>Web applications<br />Websites &amp; landing pages<br />CRM &amp; automation<br />SaaS products</p></div><span className="card-cta">Explore the Builds <ArrowUpRight /></span></Link>
         </div>
       </section>
 
@@ -43,7 +45,6 @@ export default function Home() {
       </section>
 
       <section className="about-preview shell"><div className="eyebrow">A BUILDER, NOT A CATEGORY</div><div><Reveal><h2>I don&apos;t separate<br /><em>creativity</em> from<br />technology.</h2></Reveal><div className="about-copy"><p>I enjoy taking ideas from an empty page to something people can actually watch, click, use or experience.</p><Link className="text-link" href="/about">More about me <ArrowRight /></Link></div></div></section>
-      <section className="toolbelt"><div className="eyebrow shell">CURRENT TOOLBELT</div><div className="marquee"><div>{[...tools, ...tools].map((tool, i) => <span key={`${tool}-${i}`}>{tool}<i>✦</i></span>)}</div></div></section>
     </>
   );
 }

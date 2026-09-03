@@ -48,15 +48,85 @@ export const videoProjects: VideoProject[] = [
   },
 ];
 
-export const softwareProjects = [
+export type SoftwareProject = {
+  slug: string;
+  title: string;
+  category: string;
+  description: string;
+  thumbnail?: string;
+  videoSrc?: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  stack?: string[];
+  role?: string;
+  featured?: boolean;
+  subtitle?: string;
+  status?: string;
+};
+
+export const softwareProjects: SoftwareProject[] = [
   {
+    slug: "cues",
     title: "Cues",
+    category: "SOFTWARE / FINTECH",
     subtitle: "Personal Finance Intelligence",
-    description: "A responsive personal finance product in development to help people understand their spending habits and financial behaviour.",
+    description: "A budgeting and statement-insight product that helps users understand spending patterns, financial behaviour, and money flow with more clarity.",
+    thumbnail: "/images/projects/cues-thumbnail.png",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "GitHub"],
     status: "In development",
     liveUrl: "https://checkcues.com",
     githubUrl: "https://github.com/ultimatemoxie",
+    featured: true,
+  },
+  {
+    slug: "shopify-partnership",
+    title: "Shopify Partnership",
+    category: "WEBSITE / E-COMMERCE",
+    description: "A responsive Shopify-focused growth and landing page built around conversion-oriented presentation, service positioning, and clear calls to action.",
+    thumbnail: "/images/projects/shopify-partnership.png",
+    liveUrl: "https://grow-shopy-spark.lovable.app/",
+  },
+  {
+    slug: "pink-purse-power",
+    title: "Pink Purse Power",
+    category: "WEBSITE / FINANCIAL SERVICES",
+    description: "A polished financial-services website focused on credit education, financial coaching, and clear consultation pathways, with a warm editorial visual system.",
+    thumbnail: "/images/projects/pink-purse-power.png",
+    liveUrl: "https://pink-purse-power-web.lovable.app/",
+  },
+  {
+    slug: "wellsteer-training",
+    title: "WellSteer Training",
+    category: "WEBSITE / TRAINING & INDUSTRIAL SERVICES",
+    description: "A training and enrollment website for WellSteer Oilfield Technology Services, focused on digital flow assurance training for oil and gas professionals.",
+    thumbnail: "/images/projects/wellsteer-training.png",
+    liveUrl: "https://wellsteertraining.com/",
+  },
+];
+
+export type CrmProject = SoftwareProject & {
+  role?: string;
+  videoSrc?: string;
+};
+
+export const crmProjects: CrmProject[] = [
+  {
+    slug: "crm-demo-01",
+    title: "CRM Demo 01",
+    category: "CRM / AUTOMATION",
+    description: "A CRM system focused on lead management, pipeline visibility, follow-ups, task organization, and automation workflows.",
+    role: "Product planning, workflow design, CRM structure, automation logic, interface development, testing, and implementation.",
+    thumbnail: "/images/projects/crm-demo-01-thumbnail.png",
+    videoSrc: "/videos/crm-demo-01.mp4",
+  },
+  {
+    slug: "crm-demo-02",
+    title: "CRM Demo 02",
+    category: "CRM / AUTOMATION",
+    description: "A CRM and client-management workflow designed to organize leads, conversations, opportunities, reminders, reporting, and operational follow-up.",
+    role: "Product planning, workflow design, CRM structure, automation logic, interface development, testing, and implementation.",
+    thumbnail: "/images/projects/crm-demo-02-thumbnail.png",
+    videoSrc: "/videos/crm-demo-02.mp4",
   },
 ];
 
@@ -70,13 +140,14 @@ export type FeaturedProject = {
   thumbnail?: string;
   videoSrc?: string;
   liveUrl?: string;
+  ctaLabel?: string;
 };
 
 export const featuredWork: FeaturedProject[] = [
   { title: "NESCAFÉ Spec Commercial", category: "AI Video / Commercial", kind: "video", tone: "ember", href: "/video/nescafe-spec-commercial", mediaType: "video", thumbnail: "/images/projects/nescafe-spec-thumbnail.png", videoSrc: "/videos/nescafe-spec-commercial.mp4" },
-  { title: "Cues", category: "Software / Fintech", kind: "software", tone: "cream", href: "https://checkcues.com", liveUrl: "https://checkcues.com", mediaType: "external", thumbnail: "/images/moxie-system-dashboard-concept.png" },
+  { title: "Cues", category: "Software / Fintech", kind: "software", tone: "cream", href: "https://checkcues.com", liveUrl: "https://checkcues.com", ctaLabel: "Visit checkcues.com ↗", mediaType: "external", thumbnail: "/images/projects/cues-thumbnail.png" },
   { title: "AI Music Video", category: "AI Video / Film", kind: "video", tone: "amber", href: "/video/ai-music-video", mediaType: "image", thumbnail: "/images/projects/ai-music-video-thumbnail.png" },
-  { title: "Next build in progress", category: "Product / Development", kind: "software", tone: "dark", href: "/software", mediaType: "placeholder" },
+  { title: "Shopify Partnership", category: "Website / E-commerce", kind: "software", tone: "dark", href: "https://grow-shopy-spark.lovable.app/", liveUrl: "https://grow-shopy-spark.lovable.app/", ctaLabel: "Visit Live Site ↗", mediaType: "external", thumbnail: "/images/projects/shopify-partnership.png" },
 ];
 
 export const tools = ["Veo 3.1", "Kling", "Runway", "CapCut", "Midjourney", "ChatGPT", "ElevenLabs", "Next.js", "TypeScript", "Tailwind", "GitHub", "Google Sheets"];
