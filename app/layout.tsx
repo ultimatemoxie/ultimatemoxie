@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     icon: "/images/moxie-avatar.jpg",
     apple: "/images/moxie-avatar.jpg",
   },
+  verification: {
+    google: "nvQkqIAW_4GWF5Zd9mQu-IMtp18s2yE5RoqNWFK28i4",
+  },
 };
 
 const structuredData = {
