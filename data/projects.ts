@@ -7,6 +7,7 @@ export type VideoProject = {
   tools: string[];
   projectNote?: string;
   thumbnail: string;
+  thumbnailAlt: string;
   videoSrc: string;
   tone: "ember" | "amber" | "burnt";
 };
@@ -21,6 +22,7 @@ export const videoProjects: VideoProject[] = [
     tools: ["Veo 3.1", "Kling", "CapCut", "ChatGPT", "ElevenLabs"],
     projectNote: "This is an independently created spec commercial and was not commissioned or officially endorsed by NESCAFÉ.",
     thumbnail: "/images/projects/nescafe-spec-thumbnail.png",
+    thumbnailAlt: "NESCAFÉ cinematic AI spec commercial by Ultimate Moxie",
     videoSrc: "/videos/nescafe-spec-commercial.mp4",
     tone: "ember",
   },
@@ -32,6 +34,7 @@ export const videoProjects: VideoProject[] = [
     role: "Concept development, scene planning, prompt writing, visual generation, image-to-video animation, editing, sound design, and final delivery.",
     tools: ["Veo 3.1", "Kling", "CapCut", "ChatGPT", "ElevenLabs"],
     thumbnail: "/images/projects/ai-music-video-thumbnail.png",
+    thumbnailAlt: "Cinematic AI music video created by Ultimate Moxie",
     videoSrc: "/videos/ai-music-video.mp4",
     tone: "amber",
   },
@@ -43,6 +46,7 @@ export const videoProjects: VideoProject[] = [
     role: "Concept development, world-building, scene planning, prompt writing, visual generation, animation, editing, sound design, and final delivery.",
     tools: ["Kling", "ChatGPT", "CapCut"],
     thumbnail: "/images/projects/dracus-thumbnail.png",
+    thumbnailAlt: "The Undiscovered World cinematic AI short film by Ultimate Moxie",
     videoSrc: "/videos/dracus-ai-short-film.mp4",
     tone: "burnt",
   },
@@ -54,6 +58,7 @@ export type SoftwareProject = {
   category: string;
   description: string;
   thumbnail?: string;
+  thumbnailAlt?: string;
   videoSrc?: string;
   liveUrl?: string;
   githubUrl?: string;
@@ -72,6 +77,7 @@ export const softwareProjects: SoftwareProject[] = [
     subtitle: "Personal Finance Intelligence",
     description: "A budgeting and statement-insight product that helps users understand spending patterns, financial behaviour, and money flow with more clarity.",
     thumbnail: "/images/projects/cues-thumbnail.png",
+    thumbnailAlt: "Cues personal finance campaign artwork by Ultimate Moxie",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "GitHub"],
     status: "In development",
     liveUrl: "https://checkcues.com",
@@ -84,6 +90,7 @@ export const softwareProjects: SoftwareProject[] = [
     category: "WEBSITE / E-COMMERCE",
     description: "A responsive Shopify-focused growth and landing page built around conversion-oriented presentation, service positioning, and clear calls to action.",
     thumbnail: "/images/projects/shopify-partnership.png",
+    thumbnailAlt: "Shopify Partnership landing page website project",
     liveUrl: "https://grow-shopy-spark.lovable.app/",
   },
   {
@@ -92,6 +99,7 @@ export const softwareProjects: SoftwareProject[] = [
     category: "WEBSITE / FINANCIAL SERVICES",
     description: "A polished financial-services website focused on credit education, financial coaching, and clear consultation pathways, with a warm editorial visual system.",
     thumbnail: "/images/projects/pink-purse-power.png",
+    thumbnailAlt: "Pink Purse Power financial services website project",
     liveUrl: "https://pink-purse-power-web.lovable.app/",
   },
   {
@@ -100,6 +108,7 @@ export const softwareProjects: SoftwareProject[] = [
     category: "WEBSITE / TRAINING & INDUSTRIAL SERVICES",
     description: "A training and enrollment website for WellSteer Oilfield Technology Services, focused on digital flow assurance training for oil and gas professionals.",
     thumbnail: "/images/projects/wellsteer-training.png",
+    thumbnailAlt: "WellSteer Training course website project",
     liveUrl: "https://wellsteertraining.com/",
   },
 ];
@@ -117,6 +126,7 @@ export const crmProjects: CrmProject[] = [
     description: "A CRM system focused on lead management, pipeline visibility, follow-ups, task organization, and automation workflows.",
     role: "Product planning, workflow design, CRM structure, automation logic, interface development, testing, and implementation.",
     thumbnail: "/images/projects/crm-demo-01-thumbnail.png",
+    thumbnailAlt: "CRM Demo 01 lead management dashboard",
     videoSrc: "/videos/crm-demo-01.mp4",
   },
   {
@@ -126,6 +136,7 @@ export const crmProjects: CrmProject[] = [
     description: "A CRM and client-management workflow designed to organize leads, conversations, opportunities, reminders, reporting, and operational follow-up.",
     role: "Product planning, workflow design, CRM structure, automation logic, interface development, testing, and implementation.",
     thumbnail: "/images/projects/crm-demo-02-thumbnail.png",
+    thumbnailAlt: "CRM Demo 02 client management workflow",
     videoSrc: "/videos/crm-demo-02.mp4",
   },
 ];
@@ -138,16 +149,17 @@ export type FeaturedProject = {
   href: string;
   mediaType: "video" | "external" | "image" | "placeholder";
   thumbnail?: string;
+  thumbnailAlt?: string;
   videoSrc?: string;
   liveUrl?: string;
   ctaLabel?: string;
 };
 
 export const featuredWork: FeaturedProject[] = [
-  { title: "NESCAFÉ Spec Commercial", category: "AI Video / Commercial", kind: "video", tone: "ember", href: "/video/nescafe-spec-commercial", mediaType: "video", thumbnail: "/images/projects/nescafe-spec-thumbnail.png", videoSrc: "/videos/nescafe-spec-commercial.mp4" },
-  { title: "Cues", category: "Software / Fintech", kind: "software", tone: "cream", href: "https://checkcues.com", liveUrl: "https://checkcues.com", ctaLabel: "Visit checkcues.com ↗", mediaType: "external", thumbnail: "/images/projects/cues-thumbnail.png" },
-  { title: "AI Music Video", category: "AI Video / Film", kind: "video", tone: "amber", href: "/video/ai-music-video", mediaType: "image", thumbnail: "/images/projects/ai-music-video-thumbnail.png" },
-  { title: "Shopify Partnership", category: "Website / E-commerce", kind: "software", tone: "dark", href: "https://grow-shopy-spark.lovable.app/", liveUrl: "https://grow-shopy-spark.lovable.app/", ctaLabel: "Visit Live Site ↗", mediaType: "external", thumbnail: "/images/projects/shopify-partnership.png" },
+  { title: "NESCAFÉ Spec Commercial", category: "AI Video / Commercial", kind: "video", tone: "ember", href: "/video/nescafe-spec-commercial", mediaType: "video", thumbnail: "/images/projects/nescafe-spec-thumbnail.png", thumbnailAlt: "NESCAFÉ cinematic AI spec commercial by Ultimate Moxie", videoSrc: "/videos/nescafe-spec-commercial.mp4" },
+  { title: "Cues", category: "Software / Fintech", kind: "software", tone: "cream", href: "https://checkcues.com", liveUrl: "https://checkcues.com", ctaLabel: "Visit checkcues.com ↗", mediaType: "external", thumbnail: "/images/projects/cues-thumbnail.png", thumbnailAlt: "Cues personal finance campaign artwork by Ultimate Moxie" },
+  { title: "AI Music Video", category: "AI Video / Film", kind: "video", tone: "amber", href: "/video/ai-music-video", mediaType: "image", thumbnail: "/images/projects/ai-music-video-thumbnail.png", thumbnailAlt: "Cinematic AI music video created by Ultimate Moxie" },
+  { title: "Shopify Partnership", category: "Website / E-commerce", kind: "software", tone: "dark", href: "https://grow-shopy-spark.lovable.app/", liveUrl: "https://grow-shopy-spark.lovable.app/", ctaLabel: "Visit Live Site ↗", mediaType: "external", thumbnail: "/images/projects/shopify-partnership.png", thumbnailAlt: "Shopify Partnership landing page website project" },
 ];
 
 export const tools = ["Veo 3.1", "Kling", "Runway", "CapCut", "Midjourney", "ChatGPT", "ElevenLabs", "Next.js", "TypeScript", "Tailwind", "GitHub", "Google Sheets"];

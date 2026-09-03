@@ -14,7 +14,7 @@ export function SelectedWorkCard({ project, index }: { project: FeaturedProject;
 
   const poster = (
     <div className={`featured-visual${project.thumbnail ? " has-project-media" : ""}`}>
-      {project.thumbnail && <Image src={project.thumbnail} alt={`${project.title} project thumbnail`} fill sizes="(max-width: 720px) 100vw, 50vw" />}
+      {project.thumbnail && <Image src={project.thumbnail} alt={project.thumbnailAlt ?? `${project.title} project thumbnail`} fill sizes="(max-width: 720px) 100vw, 50vw" />}
       {project.thumbnail && <span className="featured-media-shade" aria-hidden="true" />}
       <span className="featured-index">0{index + 1}</span>
       {project.mediaType === "video" ? <span className="featured-play" aria-hidden="true"><Play fill="currentColor" /></span> : <ArrowDownRight />}

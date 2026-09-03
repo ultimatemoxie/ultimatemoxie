@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { SOCIAL_PROFILES } from "@/lib/site";
 
 const socials = [
-  ["X", "https://x.com/ultimate_moxie"],
-  ["LinkedIn", "https://linkedin.com/in/ultimate-moxie-a4664b292"],
-  ["GitHub", "https://github.com/ultimatemoxie"],
+  ["X", SOCIAL_PROFILES.x],
+  ["LinkedIn", SOCIAL_PROFILES.linkedin],
+  ["GitHub", SOCIAL_PROFILES.github],
 ];
 
 export function Footer() {
@@ -15,7 +16,7 @@ export function Footer() {
       <div className="footer-bottom">
         <div><strong>Oladosu Abdulmuiz Adeshina</strong><span>Ultimate Moxie</span></div>
         <a href="mailto:ultimatemoxie290@gmail.com">ultimatemoxie290@gmail.com</a>
-        <div className="socials">{socials.map(([label, href]) => <a target="_blank" rel="noreferrer" href={href} key={label}>{label}</a>)}</div>
+        <div className="socials">{socials.map(([label, href]) => <a target="_blank" rel="noopener noreferrer" aria-label={`Ultimate Moxie on ${label}`} href={href} key={label}>{label}</a>)}</div>
         <span>© {new Date().getFullYear()}</span>
       </div>
     </footer>

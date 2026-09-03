@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { videoProjects } from "@/data/projects";
 import { Reveal } from "@/components/reveal";
+import { createPageMetadata } from "@/lib/metadata";
 
 type ProjectPageProps = { params: Promise<{ slug: string }> };
 
@@ -14,7 +15,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = videoProjects.find((item) => item.slug === slug);
-  return project ? { title: project.title, description: project.description } : {};
+  return project ? createPageMetadata({
+    path: `/video/${project.slug}`,
+    title: `${project.title} | Ultimate Moxie`,
+    description: project.description,
+  }) : {};
 }
 
 export default async function VideoProjectPage({ params }: ProjectPageProps) {

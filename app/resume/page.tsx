@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Download } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = { title: "Resume" };
+export const metadata: Metadata = createPageMetadata({
+  path: "/resume",
+  title: "Resume | Ultimate Moxie — AI Creative & Product Builder",
+  description: "View the resume, capabilities, tools and selected work of Oladosu Abdulmuiz Adeshina, an AI Creative, video creator and software product builder.",
+});
 const tools = "Veo 3.1, Kling, Runway, CapCut, Midjourney, ChatGPT, ElevenLabs, Suno, Canva, Next.js, TypeScript, Tailwind CSS, GitHub, Google Docs, Google Sheets";
 export default function ResumePage() { return <>
   <PageHero index="04" eyebrow="EXPERIENCE + CAPABILITIES" title={<>Creative instincts.<br /><em>Builder&apos;s discipline.</em></>} copy="AI content, cinematic video production, web products and practical digital workflows." />

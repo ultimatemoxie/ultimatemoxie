@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Braces, Clapperboard } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SelectedWorkCard } from "@/components/selected-work-card";
 import { featuredWork, tools } from "@/data/projects";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createPageMetadata({ path: "/" });
 
 export default function Home() {
   return (
@@ -23,7 +27,7 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <Reveal><h1>I build things<br />people can<span className="hero-mobile-break"><br /></span> <em>watch,</em><br /><span>use &amp; remember.</span></h1></Reveal>
-            <Reveal className="hero-description" delay={0.12}><p>I&apos;m Oladosu Abdulmuiz Adeshina — an AI Creative &amp; Product Builder working across cinematic AI video, software and automation.</p><div className="hero-actions"><Link className="pill pill-ember" href="#work">Explore My Work <ArrowRight /></Link><Link className="text-link" href="/resume">View Resume <ArrowUpRight /></Link></div></Reveal>
+            <Reveal className="hero-description" delay={0.12}><p>I&apos;m Oladosu Abdulmuiz Adeshina, also known as Ultimate Moxie—an AI Creative &amp; Product Builder creating cinematic AI video, software products, websites, CRM systems and automation workflows.</p><div className="hero-actions"><Link className="pill pill-ember" href="#work">Explore My Work <ArrowRight /></Link><Link className="text-link" href="/resume">View Resume <ArrowUpRight /></Link></div></Reveal>
           </div>
         </div>
         <div className="discipline-strip">{["AI VIDEO", "SOFTWARE", "AUTOMATION", "PRODUCT THINKING"].map((item, i) => <div key={item}><span>0{i + 1}</span><strong>{item}</strong></div>)}</div>

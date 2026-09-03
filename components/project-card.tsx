@@ -28,7 +28,7 @@ export function VideoProjectCard({ project, index }: { project: VideoProject; in
         </div>
       ) : (
         <motion.button type="button" className={`project-media project-media-trigger tone-${project.tone}`} onClick={() => { setLoadFailed(false); setPlaying(true); }} aria-label={`Play ${project.title}`} whileHover={reduced ? undefined : { scale: 0.985 }} transition={{ duration: 0.35 }}>
-          <Image src={project.thumbnail} alt={`${project.title} video poster`} fill sizes="(max-width: 720px) 100vw, 1440px" />
+          <Image src={project.thumbnail} alt={project.thumbnailAlt} fill sizes="(max-width: 720px) 100vw, 1440px" />
           <span className="project-media-shade" aria-hidden="true" />
           <span className="media-index">0{index + 1}</span>
           <span className="play" aria-hidden="true"><Play fill="currentColor" /></span>

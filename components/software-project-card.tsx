@@ -16,12 +16,12 @@ export function SoftwareProjectCard({ project, index }: { project: SoftwareProje
         </div>
       ) : project.videoSrc ? (
         <button className="software-project-media software-project-play" type="button" onClick={() => setPlaying(true)} aria-label={`Play ${project.title} demo`}>
-          {project.thumbnail && <Image src={project.thumbnail} alt={`${project.title} interface`} fill sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw" />}
+          {project.thumbnail && <Image src={project.thumbnail} alt={project.thumbnailAlt ?? `${project.title} interface`} fill sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw" />}
           <span><Play fill="currentColor" /></span>
         </button>
       ) : project.liveUrl ? (
         <a className="software-project-media" href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} live site`}>
-          {project.thumbnail && <Image src={project.thumbnail} alt={`${project.title} website screenshot`} fill sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw" />}
+          {project.thumbnail && <Image src={project.thumbnail} alt={project.thumbnailAlt ?? `${project.title} website screenshot`} fill sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw" />}
         </a>
       ) : null}
       <div className="software-project-copy">
