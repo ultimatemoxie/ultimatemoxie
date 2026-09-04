@@ -5,14 +5,14 @@ import { ArrowUpRight, Play } from "lucide-react";
 import { useState } from "react";
 import type { SoftwareProject } from "@/data/projects";
 
-export function SoftwareProjectCard({ project, index }: { project: SoftwareProject; index: number }) {
+export function SoftwareProjectCard({ project, index, autoPlayOnOpen = true }: { project: SoftwareProject; index: number; autoPlayOnOpen?: boolean }) {
   const [playing, setPlaying] = useState(false);
 
   return (
     <article className="software-project-card">
       {project.videoSrc && playing ? (
         <div className="software-project-media software-project-video">
-          <video src={project.videoSrc} controls playsInline preload="metadata" poster={project.thumbnail} autoPlay aria-label={`${project.title} demo`} />
+          <video src={project.videoSrc} controls playsInline preload="metadata" poster={project.thumbnail} autoPlay={autoPlayOnOpen} aria-label={`${project.title} demo`} />
         </div>
       ) : project.videoSrc ? (
         <button className="software-project-media software-project-play" type="button" onClick={() => setPlaying(true)} aria-label={`Play ${project.title} demo`}>
