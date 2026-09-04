@@ -59,7 +59,7 @@ export function ServicePage({ service }: { service: ServicePageData }) {
   return (
     <>
       <ServiceJsonLd service={service} />
-      <PageHero index={service.index} eyebrow={service.eyebrow} title={<>{service.title[0]}<br /><em>{service.title[1]}</em></>} copy={service.heroCopy} />
+      <PageHero className="service-hero" index={service.index} eyebrow={service.eyebrow} title={<><span className="service-title-line">{service.title[0]}</span><br /><em className="service-title-line">{service.title[1]}</em></>} copy={service.heroCopy} />
 
       <section className="service-overview shell">
         <div className="service-section-heading"><span className="eyebrow">{service.sectionLabel}</span><Reveal><h2>{service.sectionTitle}</h2></Reveal></div>
