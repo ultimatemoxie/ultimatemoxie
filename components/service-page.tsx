@@ -58,6 +58,11 @@ function LaunchPackPage({ service }: { service: ServicePageData }) {
           <p>{service.heroNote}</p>
           <div><a className="pill pill-ember" href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Book the 48-Hour AI Launch Pack on WhatsApp">Book the Launch Pack <ArrowUpRight /></a><a className="text-link" href="#selected-work">View Sample Work <ArrowRight /></a></div>
         </Reveal>
+        <div className="launch-gradient-background" aria-hidden="true">
+          {/* This image layer can later be swapped for an autoplay, muted, looped, playsInline video when an animated gradient asset exists. */}
+          <Image priority src="/images/launch-pack/launch-gradient-01.png" alt="" fill sizes="100vw" />
+          <span />
+        </div>
       </section>
 
       <section className="service-overview launch-pack-included shell">
