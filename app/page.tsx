@@ -43,6 +43,12 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-launch-offer shell">
+        <div><span className="eyebrow">FEATURED OFFER</span><strong><span>$</span>250</strong></div>
+        <Reveal><h2>Need launch content <em>fast?</em></h2></Reveal>
+        <div className="home-launch-offer-copy"><p>The 48-Hour AI Launch Pack turns one idea into a cinematic promo, social cutdowns, a branded key visual and posting copy.</p><Link className="pill pill-light" href="/services/ai-launch-pack">Explore the Launch Pack <ArrowRight /></Link></div>
+      </section>
+
       <section className="featured shell">
         <div className="section-heading"><span className="eyebrow">SELECTED WORK · 2025—NOW</span><h2>Built to be<br /><em>experienced.</em></h2></div>
         <div className="featured-grid">{featuredWork.map((project, i) => <Reveal key={project.title}><SelectedWorkCard project={project} index={i} /></Reveal>)}</div>
