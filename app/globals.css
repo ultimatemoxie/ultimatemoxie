@@ -384,13 +384,12 @@ h1 em,h2 em,.footer-statement em { color:var(--ember); font-family:Georgia, seri
   .service-offer-callout { width:calc(100% - 48px); margin-block:18px; padding:28px 22px; display:block; }
   .service-offer-callout h2 { margin:18px 0 30px; font-size:clamp(2rem,9vw,2.7rem); }
   .service-offer-callout .pill { width:100%; min-height:60px; }
-  .launch-pack-hero { width:calc(100% - 48px); padding-top:52px; padding-bottom:64px; }
-  .launch-gradient-background img { object-position:60% center; }
-  .launch-gradient-background>span { background:linear-gradient(180deg,rgba(246,242,234,.72) 0%,rgba(246,242,234,.58) 62%,rgba(246,242,234,.78) 100%); }
+  .launch-pack-hero { width:100%; margin-inline:0; padding:52px 24px 64px; border-radius:0; background:#f6f2ea; }
+  .launch-pack-hero .launch-gradient-background { display:none; }
   .launch-pack-hero>.eyebrow { margin-bottom:26px; gap:16px; font-size:13px; letter-spacing:.14em; }
-  .launch-pack-hero h1 { margin-bottom:26px; font-size:clamp(2.55rem,10.5vw,3.25rem); line-height:.94; letter-spacing:-.055em; }
+  .launch-pack-hero h1 { margin-bottom:26px; font-size:clamp(2.45rem,10.5vw,3.15rem); line-height:.96; letter-spacing:-.055em; }
   .launch-pack-hero h1>span.service-title-line { max-width:9ch; }
-  .launch-pack-hero h1 em.service-title-line { max-width:14ch; margin-top:8px; font-size:clamp(2.4rem,10vw,3.05rem); line-height:1; }
+  .launch-pack-hero h1 em.service-title-line { max-width:14ch; margin-top:8px; font-size:clamp(2.35rem,10vw,3rem); line-height:1; }
   .launch-pack-hero .page-hero-copy { max-width:32ch; color:rgba(12,12,12,.78); font-size:17px; line-height:1.5; }
   .launch-pack-hero-offer { width:100%; margin-top:20px; padding-top:18px; grid-template-columns:1fr; gap:16px; }
   .launch-pack-hero-offer>strong { grid-row:auto; font-size:clamp(3.8rem,16vw,5.2rem); }
@@ -433,16 +432,16 @@ h1 em,h2 em,.footer-statement em { color:var(--ember); font-family:Georgia, seri
   .about-preview { padding-inline:20px; }
   .service-hero,.service-overview,.service-process,.service-work,.service-tools,.service-related { width:calc(100% - 40px); }
   .service-hero { padding-top:56px; padding-bottom:62px; }
-  .launch-pack-hero { padding-top:48px; padding-bottom:60px; }
+  .launch-pack-hero { width:100%; padding:48px 20px 60px; }
   .service-hero h1 { font-size:clamp(2.25rem,11.5vw,2.6rem); }
   .service-hero .page-hero-copy,.service-intro-copy p { font-size:17px; }
   .service-section-heading h2 { font-size:clamp(2.25rem,10.5vw,2.75rem); }
   .service-cta { padding-block:64px; }
   .service-cta h2 { font-size:clamp(2rem,10.2vw,2.3rem); }
-  .service-offer-callout,.launch-pack-hero,.launch-pack-audience,.launch-pack-why { width:calc(100% - 40px); }
+  .service-offer-callout,.launch-pack-audience,.launch-pack-why { width:calc(100% - 40px); }
   .home-launch-offer { padding-inline:20px; }
-  .launch-pack-hero h1 { font-size:2.5rem; }
-  .launch-pack-hero h1 em.service-title-line { font-size:2.25rem; }
+  .launch-pack-hero h1 { font-size:2.45rem; }
+  .launch-pack-hero h1 em.service-title-line { font-size:2.35rem; }
   .launch-pack-hero-offer>strong,.launch-pack-cta-details>strong { font-size:3.8rem; }
   .launch-pack-included .service-capability-grid>div { min-height:0; }
   .launch-pack-cta h2 { max-width:14ch; font-size:clamp(2.25rem,10vw,2.5rem); }
