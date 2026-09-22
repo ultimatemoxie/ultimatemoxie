@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Mrs. G commercial growth and conversion system</title>
+  <desc id="desc">An editorial diagram showing audience attention moving through focused offers, tracked action and optimization.</desc>
+  <rect width="1600" height="1000" fill="#0c0c0c"/>
+  <circle cx="1360" cy="-30" r="390" fill="#f45a24" opacity=".92"/>
+  <circle cx="1120" cy="890" r="330" fill="#8f2f16" opacity=".9"/>
+  <path d="M-80 820C280 610 420 660 690 440s510-210 970-80" fill="none" stroke="#ff9d16" stroke-width="8" opacity=".9"/>
+  <path d="M-80 860C280 650 445 710 720 485s520-220 980-90" fill="none" stroke="#f6f2ea" stroke-width="2" opacity=".42"/>
+  <text x="90" y="120" fill="#f45a24" font-family="Arial, sans-serif" font-size="24" letter-spacing="7">ONGOING COMMERCIAL GROWTH PILOT</text>
+  <text x="90" y="280" fill="#f6f2ea" font-family="Arial, sans-serif" font-size="150" font-weight="700" letter-spacing="-9">MRS. G</text>
+  <text x="96" y="360" fill="#f6f2ea" font-family="Georgia, serif" font-size="66" font-style="italic">attention into action.</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">
+    <rect x="90" y="550" width="250" height="86" rx="43" fill="#f6f2ea"/><text x="215" y="602" fill="#0c0c0c" text-anchor="middle">AUDIENCE</text>
+    <rect x="405" y="550" width="250" height="86" rx="43" fill="#f45a24"/><text x="530" y="602" fill="#f6f2ea" text-anchor="middle">INTENT</text>
+    <rect x="720" y="550" width="250" height="86" rx="43" fill="#f6f2ea"/><text x="845" y="602" fill="#0c0c0c" text-anchor="middle">ACTION</text>
+    <rect x="1035" y="550" width="360" height="86" rx="43" fill="#ff9d16"/><text x="1215" y="602" fill="#0c0c0c" text-anchor="middle">OPTIMIZATION</text>
+  </g>
+  <g fill="#f6f2ea"><path d="M355 593h35l-14-14 9-9 30 23-30 23-9-9 14-14h-35z"/><path d="M670 593h35l-14-14 9-9 30 23-30 23-9-9 14-14h-35z"/><path d="M985 593h35l-14-14 9-9 30 23-30 23-9-9 14-14h-35z"/></g>
+  <text x="92" y="900" fill="#f6f2ea" opacity=".65" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">CONVERSION STRATEGY · FUNNEL ARCHITECTURE · ANALYTICS · AUTOMATION</text>
+</svg>

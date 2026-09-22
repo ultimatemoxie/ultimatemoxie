@@ -22,7 +22,7 @@ export function SelectedWorkCard({ project, index }: { project: FeaturedProject;
   );
 
   return (
-    <article className={`featured-card featured-${project.tone} feature-${index + 1}`}>
+    <article className={`featured-card featured-${project.tone} feature-${index + 1}${project.role ? " featured-case-study" : ""}`}>
       {project.mediaType === "video" && playing && !failed ? (
         <div className="featured-visual has-project-media featured-video-active">
           <video src={project.videoSrc} controls playsInline preload="metadata" poster={project.thumbnail} autoPlay aria-label={`${project.title} video player`} onError={() => { setFailed(true); setPlaying(false); }} />
@@ -33,7 +33,15 @@ export function SelectedWorkCard({ project, index }: { project: FeaturedProject;
         <Link href={project.href} {...linkProps}>{poster}</Link>
       )}
       <div className="featured-caption">
-        <Link href={project.href} {...linkProps}><span>{project.category}</span><h3>{project.title}</h3>{external && project.ctaLabel && <small>{project.ctaLabel}</small>}</Link>
+        <Link href={project.href} {...linkProps}>
+          <span>{project.category}</span>
+          <h3>{project.title}</h3>
+          {project.description && <p>{project.description}</p>}
+          {project.proof && <small className="featured-proof">{project.proof}</small>}
+          {project.role && <small className="featured-role"><strong>Role</strong>{project.role}</small>}
+          {project.status && <small className="featured-status"><i aria-hidden="true" />{project.status}</small>}
+          {project.ctaLabel && <small className="featured-cta-label">{project.ctaLabel}</small>}
+        </Link>
         <Link href={project.href} aria-label={external ? "Visit Cues live product" : `View ${project.title}`} {...linkProps}><ArrowUpRight /></Link>
       </div>
     </article>

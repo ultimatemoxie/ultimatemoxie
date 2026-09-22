@@ -153,9 +153,28 @@ export type FeaturedProject = {
   videoSrc?: string;
   liveUrl?: string;
   ctaLabel?: string;
+  description?: string;
+  role?: string;
+  status?: string;
+  proof?: string;
 };
 
 export const featuredWork: FeaturedProject[] = [
+  {
+    title: "Mrs. G — Commercial Growth & Conversion System",
+    category: "Commercial Growth / Conversion Strategy",
+    kind: "software",
+    tone: "dark",
+    href: "/projects/mrs-g-growth-system",
+    mediaType: "image",
+    thumbnail: "/images/projects/mrs-g-brand-proof.png",
+    thumbnailAlt: "Mrs. G public Instagram audience and officiallymrsg.com commercial destination",
+    description: "Turning a large social audience into a measurable path from content → focused offers → tracked purchases.",
+    role: "Conversion Strategy · Funnel Architecture · Analytics · Automation · Creative Direction",
+    status: "Ongoing Commercial Growth Pilot",
+    proof: "100M+ video views · 150K followers",
+    ctaLabel: "View Case Study →",
+  },
   { title: "NESCAFÉ Spec Commercial", category: "AI Video / Commercial", kind: "video", tone: "ember", href: "/video/nescafe-spec-commercial", mediaType: "video", thumbnail: "/images/projects/nescafe-spec-thumbnail.png", thumbnailAlt: "NESCAFÉ cinematic AI spec commercial by Ultimate Moxie", videoSrc: "/videos/nescafe-spec-commercial.mp4" },
   { title: "Cues", category: "Software / Fintech", kind: "software", tone: "cream", href: "https://checkcues.com", liveUrl: "https://checkcues.com", ctaLabel: "Visit checkcues.com ↗", mediaType: "external", thumbnail: "/images/projects/cues-thumbnail.png", thumbnailAlt: "Cues personal finance campaign artwork by Ultimate Moxie" },
   { title: "AI Music Video", category: "AI Video / Film", kind: "video", tone: "amber", href: "/video/ai-music-video", mediaType: "image", thumbnail: "/images/projects/ai-music-video-thumbnail.png", thumbnailAlt: "Cinematic AI music video created by Ultimate Moxie" },

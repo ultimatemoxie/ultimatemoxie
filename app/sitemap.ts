@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: "yearly", priority: 0.7 },
     { url: `${SITE_URL}/resume`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/contact`, lastModified, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${SITE_URL}/projects/mrs-g-growth-system`, lastModified, changeFrequency: "monthly", priority: 0.9 },
   ];
 
   return pages.concat(serviceList.map((service) => ({
