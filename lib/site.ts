@@ -13,3 +13,9 @@ export const SOCIAL_PROFILES = {
   github: "https://github.com/ultimatemoxie",
   x: "https://x.com/ultimate_moxie",
 } as const;
+
+export const AGENTIC_RESEARCH_LINKS = {
+  agentReadyUrl: null as string | null,
+  xUrl: SOCIAL_PROFILES.x,
+  youtubeUrl: null as string | null,
+} as const;
