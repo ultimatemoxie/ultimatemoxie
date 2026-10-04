@@ -15,7 +15,7 @@ export const SOCIAL_PROFILES = {
 } as const;
 
 export const AGENTIC_RESEARCH_LINKS = {
-  agentReadyUrl: null as string | null,
+  agentReadyUrl: "https://agentready-ecru.vercel.app/",
   featuredVideoUrl: "https://youtu.be/wXZOoaf0z_0",
   featuredVideoEmbedUrl: "https://www.youtube-nocookie.com/embed/wXZOoaf0z_0",
   xUrl: SOCIAL_PROFILES.x,
