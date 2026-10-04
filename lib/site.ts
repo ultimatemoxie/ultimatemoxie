@@ -16,6 +16,8 @@ export const SOCIAL_PROFILES = {
 
 export const AGENTIC_RESEARCH_LINKS = {
   agentReadyUrl: null as string | null,
+  featuredVideoUrl: "https://youtu.be/wXZOoaf0z_0",
+  featuredVideoEmbedUrl: "https://www.youtube-nocookie.com/embed/wXZOoaf0z_0",
   xUrl: SOCIAL_PROFILES.x,
   youtubeUrl: null as string | null,
 } as const;
